@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/newtime', function (req, res) {
-    res.send('hello newtime')
+   res.render('newtime')
 })
 
 module.exports = router
