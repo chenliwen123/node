@@ -12,3 +12,7 @@ npm install --global XXX 全局安装xxx模块，但不记录到package.json里�
 # 2.看了一本node 方面的书   感觉有点老作用不太大
 
   * 接下来看模块 不知道接下来的进展会怎么样
+
+# 3 开始入门了node 
+  ##1.学习了几个模块
+  ### express body-parser ejs swig  
