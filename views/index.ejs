@@ -8,21 +8,23 @@
     <title>Document</title>
 </head>
 <body>
-
-<% %>
-<%= %>
-<%- %>
 <% if(name=='陈立文'){ %>
+
     <div>
         我是陈立文
     </div>
+
 <% }else{%>
-    <div>我是else里面的
-    </div>
+
+    <div>我是else里面的</div>
+
 <% }%>
 <form action="/post" method="post">
     name:<input type="text" name="name" value="chenliwen">
     <button>确定</button>
+    <a href="/newtime/newtime">点击</a>
 </form>
+
+<%- data %>
 </body>
 </html>

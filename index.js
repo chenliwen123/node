@@ -2,6 +2,7 @@ const express=require('express');
 const swig=require('swig');
 const bodyparser=require('body-parser');
 const newtime=require('./routers/newtime');
+const mysql=require('./mysql/index');
 const app=express();
 
 app.use(bodyparser.urlencoded({
@@ -16,13 +17,18 @@ app.use('/newtime',newtime)
 
 
 app.get('/',function (req,res) {
+    var data=[];
+    mysql.query('select * from zftp',[],function (mysqlres,mysqlreq) {
+        data=JSON.stringify(mysqlres)
+    })
+    console.log(data);
     res.render('index',{
-        name:"陈立文1"
+        name:"陈立文",
+        data:data
     })
 })
 
 app.post('/post',function (req,res) {
-    console.log(req.body.name);
     res.render('post',{
         newname:"<h1>"+req.body.name+"</h1>"
     })

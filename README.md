@@ -15,4 +15,9 @@ npm install --global XXX 全局安装xxx模块，但不记录到package.json里�
 
 # 3 开始入门了node 
   ##1.学习了几个模块
-  ### express body-parser ejs swig  
+  ### express body-parser ejs swig 
+  *****
+# 2019.12.19
+  >mysql 查询出来 只能在回调函数里面用  赋值了 也拿不出来
+  > 一定有办法解决
+   
