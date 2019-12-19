@@ -12,16 +12,19 @@ app.use(bodyparser.urlencoded({
 app.set(express.static('./views'));
 //app.engine('ejs',swig.renderFile);
 app.set('view engine','ejs')
-
 app.use('/',newtime)
 
 
-app.get('/',function (req,res) {
-    var data=[];
-    mysql.query('select * from zftp',[],function (mysqlres,mysqlreq) {
-        data=JSON.stringify(mysqlres)
+async function main () {
+    return new Promise((resolve, reject) => {
+        mysql.query('select * from zftp',[],function (mysqlres,mysqlreq) {
+            resolve(JSON.stringify(mysqlres))
+        })
     })
-    console.log(data);
+}
+
+app.get('/', async function (req,res) {
+    const data = await main()
     res.render('index',{
         name:"陈立文",
         data:data

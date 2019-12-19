@@ -20,3 +20,5 @@ npm install --global XXX 全局安装xxx模块，但不记录到package.json里�
 ## 20191219
 
 > mysql 引入和问题  只能在回调函数中 使用
+
+> 解决node 同步执行
