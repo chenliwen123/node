@@ -16,3 +16,7 @@ npm install --global XXX 全局安装xxx模块，但不记录到package.json里�
 # 3 开始入门了node 
   ##1.学习了几个模块
   ### express body-parser ejs swig  
+  ----------------
+## 20191219
+
+> mysql 引入和问题  只能在回调函数中 使用
