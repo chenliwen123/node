@@ -13,7 +13,7 @@ app.set(express.static('./views'));
 //app.engine('ejs',swig.renderFile);
 app.set('view engine','ejs')
 
-app.use('/newtime',newtime)
+app.use('/',newtime)
 
 
 app.get('/',function (req,res) {
