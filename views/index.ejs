@@ -20,10 +20,9 @@
     name:<input type="text" name="name" value="chenliwen">
     <button>确定</button>
 </form>
-<%- JSON.parse(data)[3].id %>
 
 <% JSON.parse(data).forEach(function (item,value,index) {%>
-    <p><%- item.ftpinfoid %></p>
+    <p><%- item.id %></p>
 <% })%>
 
 </body>

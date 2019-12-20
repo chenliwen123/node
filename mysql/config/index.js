@@ -3,5 +3,5 @@ module.exports={
     port:'3306',
     database:'gongdan',
     user:'root',
-    password:'123456'
+    password:''
 }
