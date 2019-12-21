@@ -8,22 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-<% if(name=='陈立文'){ %>
-    <div>
-        我是陈立文
-    </div>
-<% }else{%>
-    <div>我是else里面的
-    </div>
-<% }%>
 <form action="/post" method="post">
-    name:<input type="text" name="name" value="chenliwen">
-    <button>确定</button>
+    <h3>登录</h3>
+    name:<input type="text" name="name" value="chenliwen" placeholder="请输入用户名"><br>
+    password:<input type="password" name="pas" value="chenliwen123.." placeholder="请输入密码"><br>
+    <input type="button" value="确定"><a href="/zhuce">注册</a>
 </form>
-<% JSON.parse(data).forEach(function (item,value,index) {%>
-    <p><%- item.id %></p>
-<% })%>
-
-
 </body>
 </html>

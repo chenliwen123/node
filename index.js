@@ -3,6 +3,7 @@ const bodyparser=require('body-parser');
 const app=express();
 const index=require('./routers/index' );
 const post=require('./routers/post');
+const zhuce=require('./routers/zhuce');
 app.use(bodyparser.urlencoded({
     extended:false,
 }))
@@ -14,6 +15,7 @@ app.set('view engine','ejs')
 
 app.use('/',index)
 app.use('/',post)
+app.use('/',zhuce)
 
 
 
