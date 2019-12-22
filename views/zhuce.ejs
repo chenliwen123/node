@@ -5,15 +5,32 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../static/js/function.js"></script>
     <title>注册</title>
 </head>
 <body>
-<form action="/zhuce" method="post">
+<script>
+    function zhuce(){
+        let data=submit('/zhuce',`name=${document.getElementById('name').value}&pas=${document.getElementById('pas').value}`)
+        setTimeout(function () {
+            console.log(data)
+        },3000)
+        setinterval
+    }
+window.onload=function () {
+    document.getElementById('name').focus()
+    document.getElementById('name').onblur=function () {
+     //   alert('ssss');
+    }
+}
+</script>
+<div>
     <h3>注册</h3>
-    name:<input type="text" name="name"><br>
-    password:<input type="password" name="pas"><br>
+    name:<input type="text" name="name" id="name"><br>
+    password:<input type="password" name="pas" id="pas"><br>
     确认密码:<input type="password" name="qpas">
-    <input type="submit" value="确定">
-</form>
+    <input type="button" onclick="zhuce()" value="确定">
+</div>
+
 </body>
 </html>
