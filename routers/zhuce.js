@@ -8,7 +8,7 @@ router.post('/zhuce',async function (req,res) {
 })
 
 router.post('/checkname',async function (req,res) {
-    let data=await sql('select * from user where='+req.body.name)
+    let data=await sql('select * from user where name='+req.body.name)
     res.send(data);
 })
 

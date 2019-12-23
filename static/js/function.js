@@ -8,12 +8,10 @@ function submit(url,data){
     xmlhttp.onreadystatechange=function () {
         if (xmlhttp.readyState==4&&xmlhttp.status==200){
             index=JSON.parse(xmlhttp.responseText);
-            console.log(index);
-            return index;
         }
     }
-    xmlhttp.open('post',url,true);
+    xmlhttp.open('post',url,false);
     xmlhttp.setRequestHeader("Content-Type","Application/x-www-form-urlencoded");
     xmlhttp.send(data)
-
+    return index
 }

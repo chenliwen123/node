@@ -12,21 +12,24 @@
 <script>
     function zhuce(){
         let data=submit('/zhuce',`name=${document.getElementById('name').value}&pas=${document.getElementById('pas').value}`)
-        setTimeout(function () {
             console.log(data)
-        },3000)
-        setinterval
     }
 window.onload=function () {
-    document.getElementById('name').focus()
     document.getElementById('name').onblur=function () {
-     //   alert('ssss');
+        document.getElementById('no').style.display='none'
+        document.getElementById('ok').style.display='none'
+        let data=submit('/checkname',`name=${document.getElementById('name').value}`)
+        if (Boolean(data[0])) {
+            document.getElementById('no').style.display='block'
+        }else{
+            document.getElementById('ok').style.display='block'
+        }
     }
 }
 </script>
 <div>
     <h3>注册</h3>
-    name:<input type="text" name="name" id="name"><br>
+    name:<input type="text" name="name" id="name"><span id="ok" style="display:none;color:blue;">ok</span><span id="no" style="display:none;color:#f00000;">no</span><br>
     password:<input type="password" name="pas" id="pas"><br>
     确认密码:<input type="password" name="qpas">
     <input type="button" onclick="zhuce()" value="确定">

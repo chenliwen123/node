@@ -9,13 +9,10 @@ app.use(bodyparser.urlencoded({
     extended:false,
 }))
 
-// app.set(express.static('./views'));
-app.use(express.static(path.join(__dirname, '/')))//
+// app.set(express.static('./views'));//   下面的和现在没有区别
+app.use(express.static(path.join(__dirname, '/')))// 但是我在访问其他静态文件的时候  需要用到这个
 //app.engine('ejs',swig.renderFile);
 app.set('view engine','ejs')
-
-app.get('/')
-
 
 app.use('/',index)
 app.use('/',post)
