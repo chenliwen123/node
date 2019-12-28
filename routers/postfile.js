@@ -30,7 +30,7 @@ router.post('/file/uploading', function(req, res, next) {
       var inputFile = files.inputFile[0];
       var uploadedPath = inputFile.path;
       var dstPath = './public/' + inputFile.originalFilename;
-      //重命名为真实文件名
+      //重命名为真实文件名5
       fs.rename(uploadedPath, dstPath, function(err) {
         if(err) {
           console.log('rename error:' + err);
