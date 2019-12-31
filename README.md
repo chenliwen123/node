@@ -24,4 +24,6 @@ npm install --global XXX 全局安装xxx模块，但不记录到package.json里�
 > ~~解决node 同步执行~~
   ~~>解决了 node 异步调用 数据返回问题 async await 使用完美解决问题~~
   
-  需要解决异步上传文件
+ > 需要解决异步上传文件
+  
+ >  想写一个后台的API 
