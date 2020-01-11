@@ -2,9 +2,8 @@ const express=require('express');
 const router=express.Router();
 
 router.post('/post',function (req,res) {
-  res.render('post',{
-      newname:req.body.name
-  })
+  res.setHeader("Access-Control-Allow-Origin","*");
+  res.send({code:1,msg:"成功",data:{name:req.body.name}})
 })
 
 
